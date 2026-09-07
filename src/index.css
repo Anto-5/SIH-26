@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Dark Theme (Used by Login Page) */
   --color-brand-bg: #07111F;
   --color-brand-surface: #0D1A2B;
   --color-brand-elevated: #132238;
@@ -9,6 +10,66 @@
   --color-brand-green: #247A5A;
   --color-brand-crimson: #B52B35;
   --color-brand-amber: #F59E0B;
+
+  /* Light Enterprise Theme (Used by Dashboard) */
+  --color-light-bg: #F5F7FA;
+  --color-light-surface: #FFFFFF;
+  --color-light-secondary: #F1F4F7;
+  --color-light-border: #D9E0E8;
+  --color-light-text-primary: #10233F;
+  --color-light-text-secondary: #66758A;
+  --color-light-text-body: #34445A;
+  --color-light-saffron: #D99A2B;
+  --color-light-green: #237A57;
+  --color-light-crimson: #B8323A;
+  --color-light-blue: #315D8C;
+  --color-light-teal: #2C6E73;
+  --color-light-slate: #415A77;
+
+  /* Section: Risk Factors */
+  --color-risk-bg: #FFF5F5;
+  --color-risk-border: #E8C7CB;
+  --color-risk-accent: #B8323A;
+
+  /* Section: Security Controls */
+  --color-control-bg: #F2F8F5;
+  --color-control-border: #C8DED3;
+  --color-control-accent: #237A57;
+
+  /* Section: Investment Optimizer */
+  --color-opt-bg: #FFF8EC;
+  --color-opt-border: #E8D5AD;
+  --color-opt-accent: #D99A2B;
+
+  /* Section: Interactions */
+  --color-int-bg: #F3F7FC;
+  --color-int-border: #C9D7E8;
+  --color-int-accent: #315D8C;
+
+  /* Section: What-If */
+  --color-scen-bg: #F1F7F8;
+  --color-scen-border: #C7DDE0;
+  --color-scen-accent: #2C6E73;
+
+  /* Section: Benchmark */
+  --color-bench-bg: #F4F6F9;
+  --color-bench-border: #D5DCE5;
+  --color-bench-accent: #415A77;
+
+  /* Section: Data & Assumptions */
+  --color-data-bg: #F3F7F7;
+  --color-data-border: #CFDDDD;
+  --color-data-accent: #286B6B;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 }
 
 @layer base {

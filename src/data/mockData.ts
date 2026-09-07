@@ -3,6 +3,7 @@ export const riskFactors = [
     id: 'rf-1',
     name: 'Credential Compromise',
     likelihood: 'High',
+    frequency: 3.8,
     lossMagnitude: 'High',
     exposure: 6.2, // ₹ Cr
     severity: 'HIGH',
@@ -12,6 +13,7 @@ export const riskFactors = [
     id: 'rf-2',
     name: 'Lateral Movement',
     likelihood: 'Medium-High',
+    frequency: 2.6,
     lossMagnitude: 'High',
     exposure: 4.8,
     severity: 'HIGH',
@@ -19,8 +21,9 @@ export const riskFactors = [
   },
   {
     id: 'rf-3',
-    name: 'Data Exfiltration',
+    name: 'Data Loss / Exfiltration',
     likelihood: 'Medium',
+    frequency: 1.9,
     lossMagnitude: 'Very High',
     exposure: 3.5,
     severity: 'MEDIUM',
@@ -28,32 +31,56 @@ export const riskFactors = [
   },
   {
     id: 'rf-4',
-    name: 'Ransomware',
+    name: 'Privilege Escalation',
     likelihood: 'Medium',
+    frequency: 2.2,
     lossMagnitude: 'High',
-    exposure: 2.9,
+    exposure: 2.7,
     severity: 'MEDIUM',
-    description: 'Malicious software encrypting files and demanding payment.'
+    description: 'Attacker gaining higher-level permissions or root access.'
   },
   {
     id: 'rf-5',
-    name: 'Insider Threat',
-    likelihood: 'Low-Medium',
+    name: 'Ransomware Disruption',
+    likelihood: 'Low',
+    frequency: 0.9,
     lossMagnitude: 'High',
-    exposure: 1.8,
-    severity: 'LOW',
-    description: 'Malicious or negligent actions by employees or contractors.'
+    exposure: 2.1,
+    severity: 'HIGH',
+    description: 'Malicious software encrypting files and demanding payment.'
   },
   {
     id: 'rf-6',
-    name: 'Supply Chain',
+    name: 'Cloud Misconfiguration',
     likelihood: 'Medium',
-    lossMagnitude: 'Medium-High',
-    exposure: 1.5,
+    frequency: 2.4,
+    lossMagnitude: 'Medium',
+    exposure: 1.8,
+    severity: 'MEDIUM',
+    description: 'Exploitation of insecurely configured cloud storage or services.'
+  },
+  {
+    id: 'rf-7',
+    name: 'Insider Threat',
+    likelihood: 'Low',
+    frequency: 0.7,
+    lossMagnitude: 'High',
+    exposure: 1.2,
+    severity: 'MEDIUM',
+    description: 'Malicious or negligent actions by employees or contractors.'
+  },
+  {
+    id: 'rf-8',
+    name: 'Service Disruption',
+    likelihood: 'Low-Medium',
+    frequency: 1.5,
+    lossMagnitude: 'Medium',
+    exposure: 0.9,
     severity: 'LOW',
-    description: 'Compromise originating from third-party vendors or software.'
+    description: 'Denial of service attacks impacting system availability.'
   }
 ];
+
 
 export const controls = [
   {
